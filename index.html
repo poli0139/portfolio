@@ -10,26 +10,18 @@
     <title>Personal potrfolio</title>
   </head>
   <body>
-    <header></header>
+    <section id="zebraBoxes">
+      <div class="zebraBox" id="svgTopLeft" data-place="topLeft"></div>
+      <div class="zebraBox" id="svgTopRight" data-place="topRight"></div>
+      <div class="zebraBox" id="svgBottomRight" data-place="bottomRight"></div>
+    </section>
     <main>
-      <section id="zebraBoxes">
-        <div class="zebraBox" id="svgTopLeft" data-place="topLeft"></div>
-        <div class="zebraBox" id="svgTopRight" data-place="topRight"></div>
-        <div
-          class="zebraBox"
-          id="svgBottomRight"
-          data-place="bottomRight"
-        ></div>
-      </section>
-      <section id="lines_mainBox">
-        <section id="lines">
-          <svg id="lines" version="1.1" width="100%" height="100%">
-            <path />
-            <!--  <path d="M470 160 H1300" stroke="red" stroke-width="1" />
-          <path d=" M1100 100 V600" stroke="red" stroke-width="1" />-->
-          </svg>
-        </section>
-      </section>
+      <div id="mainContainer">
+        <svg viewBox="0 -100 1282 1000">
+          <path d="M 0 -50 L 1282 -50" stroke="black" />
+          <path d="M 1200 -100 V1000" stroke="black" />
+        </svg>
+      </div>
     </main>
     <script src="script.js"></script>
   </body>
