@@ -2,50 +2,46 @@ body {
   padding: 0;
   margin: 0;
 }
-main,
-#zebraBoxes {
-  width: 100vw;
-  height: 100vh;
-}
-#lines_mainBox {
-  width: 100%;
-  height: 100%;
-}
-#zebraBoxes {
+
+/* #zebraBoxes {
   position: fixed;
   z-index: -1;
-}
-#lines_mainBox {
-  position: absolute;
-}
+  width: 100vw;
+  height: 100vh;
+} */
+
 #svgTopLeft {
   position: fixed;
   width: 30%;
-  /* height: 10vw; */
+  height: 10vw;
+  /* background: url("assets/background.svg");
+  background-size: 100%; */
+  top: 0;
 }
 #svgTopRight {
   right: 0;
   top: 0;
-  width: 10%;
-  /*  width: 12vw;
-  height: 10vw; */
+  width: 15%;
+  height: 10vw;
+  /* background: url("assets/background.svg");
+  background-size: 200%; */
   position: fixed;
-  /* border: solid blue 1px; */
 }
-
+#lines {
+  border: solid red 1px;
+}
 #svgBottomRight {
   position: fixed;
   right: 0;
   bottom: 0;
-  width: 20vw;
-  height: auto;
+  width: 20%;
+  /* background: url("assets/background.svg");
+  background-size: 100%; */
+  height: 10vw;
 }
-/* section {
-  height: 200vh;
-} */
-/* line {
+#mainContainer {
   position: fixed;
-} */
-/* #top {
-  border: solid red 1px;
-} */
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+}
