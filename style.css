@@ -1,21 +1,31 @@
+@font-face {
+  font-family: "Intro Cond Light Free";
+  src: url("assets/IntroCondLightFree.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("assets/Montserrat-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --heading-font: "Intro Cond Light Free", sans-serif;
+  --text-font: "Montserrat", sans-serif;
+}
+
 body {
   padding: 0;
   margin: 0;
 }
 
-/* #zebraBoxes {
-  position: fixed;
-  z-index: -1;
-  width: 100vw;
-  height: 100vh;
-} */
-
 #svgTopLeft {
   position: fixed;
   width: 30%;
   height: 10vw;
-  /* background: url("assets/background.svg");
-  background-size: 100%; */
+
   top: 0;
 }
 #svgTopRight {
@@ -23,25 +33,120 @@ body {
   top: 0;
   width: 15%;
   height: 10vw;
-  /* background: url("assets/background.svg");
-  background-size: 200%; */
+
   position: fixed;
 }
-#lines {
-  border: solid red 1px;
-}
+
 #svgBottomRight {
   position: fixed;
   right: 0;
   bottom: 0;
   width: 20%;
-  /* background: url("assets/background.svg");
-  background-size: 100%; */
+
   height: 10vw;
 }
-#mainContainer {
+#boxes_and_lines {
   position: fixed;
   z-index: -1;
   width: 100vw;
   height: 100vh;
+}
+#lines {
+  position: fixed;
+}
+
+h1 {
+  font-family: var(--heading-font);
+  font-weight: lighter;
+  font-size: 3rem;
+  padding-left: 3vw;
+  border-bottom: solid black 1px;
+}
+p {
+  font-family: var(--text-font);
+  margin-left: 3vw;
+  font-size: larger;
+  padding: 2rem;
+  width: 60%;
+  border: solid black 1px;
+}
+
+#aboutMe {
+  background-color: pink;
+}
+
+#skills {
+  background-color: lightblue;
+}
+
+#projects {
+  background-color: lightyellow;
+}
+#contentSection {
+  width: 70vw;
+  height: 70vh;
+  position: absolute;
+  top: 12vw;
+  left: 0;
+  overflow: hidden;
+  border: solid red 1px;
+}
+.panel {
+  height: 70vh;
+  /* top: 12vw; */
+  position: absolute;
+  will-change: transform;
+}
+#scrollSection {
+  border: solid blue 1px;
+  position: absolute;
+}
+#pageNav {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  text-align: right;
+  right: 2rem;
+  top: 30%;
+}
+#pageNav ul {
+  list-style: none;
+  font-family: var(--heading-font);
+  font-size: smaller;
+}
+li {
+  position: relative;
+}
+h2:before,
+h2:after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  bottom: 0;
+  background: black;
+}
+
+h2:before {
+  left: 1px;
+}
+h2:after {
+  right: 1px;
+  background: black;
+  transition: all 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+h2:hover:before {
+  background: black;
+  width: 100%;
+  transition: all 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+h2:hover:after {
+  background: transparent;
+  width: 100%;
+  transition: 0s;
+}
+h2 {
+  cursor: pointer;
 }

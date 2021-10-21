@@ -11,7 +11,7 @@
   </head>
   <body>
     <main>
-      <div id="mainContainer">
+      <section id="boxes_and_lines">
         <div class="zebraBox" id="svgTopLeft" data-place="topLeft"></div>
         <div class="zebraBox" id="svgTopRight" data-place="topRight"></div>
         <div
@@ -23,8 +23,65 @@
           <path d="M 0 130 L 1120 130" stroke="black" />
           <path d="M 1025 80 V1000" stroke="black" />
         </svg>
-      </div>
+      </section>
+      <section id="scrollSection">
+        <section id="contentSection">
+          <section id="aboutMe" class="panel">
+            <h1>About me</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+              autem rem temporibus reprehenderit, quasi recusandae consequatur
+              eos maxime nobis. Repellendus voluptatem atque expedita
+              praesentium eveniet velit dignissimos accusantium dolorum
+              aspernatur!
+            </p>
+          </section>
+          <section id="projects" class="panel">
+            <h1>My projects</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+              autem rem temporibus reprehenderit, quasi recusandae consequatur
+              eos maxime nobis. Repellendus voluptatem atque expedita
+              praesentium eveniet velit dignissimos accusantium dolorum
+              aspernatur!
+            </p>
+          </section>
+          <section id="skills" class="panel">
+            <h1>My skills</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+              autem rem temporibus reprehenderit, quasi recusandae consequatur
+              eos maxime nobis. Repellendus voluptatem atque expedita
+              praesentium eveniet velit dignissimos accusantium dolorum
+              aspernatur!
+            </p>
+          </section>
+        </section>
+      </section>
+      <nav id="pageNav">
+        <ul>
+          <li>
+            <h2>About me</h2>
+          </li>
+          <li>
+            <h2>Projects</h2>
+          </li>
+          <li>
+            <h2>Skills</h2>
+          </li>
+          <li>
+            <h2>Illustrations</h2>
+          </li>
+          <li>
+            <h2>Contact me</h2>
+          </li>
+        </ul>
+      </nav>
     </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
+
     <script src="script.js"></script>
   </body>
 </html>
