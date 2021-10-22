@@ -55,7 +55,8 @@ window.addEventListener("scroll", onScroll);
 
 function onScroll() {
   console.log("scrolling");
-  let svg = document.querySelectorAll("#svgTopLeft ");
+  // let svgToAnimate = document.querySelectorAll(".zebraBox svg");
+  // svgToAnimate.classList.add("animate");
   // console.log(svg);
 }
 

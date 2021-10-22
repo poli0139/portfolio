@@ -231,3 +231,27 @@ h2 {
   margin: 0;
   transform: rotate(270deg);
 }
+
+.animate {
+  animation: svgChangeBG 10s linear infinite alternate;
+}
+@keyframes svgChangeBG {
+  0% {
+    fill: red;
+  }
+  20% {
+    fill: yellow;
+  }
+  40% {
+    fill: lightpink;
+  }
+  60% {
+    fill: lavenderblush;
+  }
+  80% {
+    fill: lemonchiffon;
+  }
+  100% {
+    fill: black;
+  }
+}
