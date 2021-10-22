@@ -59,33 +59,23 @@ function onScroll() {
   // console.log(svg);
 }
 
-const delSection = document.querySelectorAll(".delayed-section");
-delSection.forEach((section) => {
-  const containerAnimate = gsap.to(section.querySelector(".innerContainer"), {
-    y: "10vh",
-    ease: "none",
-  });
-  const imageAnimate = gsap.to(section.querySelectorAll("img"), {
-    y: "10vh",
-    ease: "none",
-    paused: true,
-  });
-  const scrub = gsap.to(imageAnimate, {
-    progress: 1,
-    paused: true,
-    ease: "power3",
-    duration: parseFloat(section.dataset.scrub) || 0.1,
-    overwrite: true,
-  });
-  ScrollTrigger.create({
-    animation: containerAnimate,
-    scrub: true,
-    trigger: section,
-    start: "top bottom",
-    end: "bottom top",
-    onUpdate: (self) => {
-      scrub.vars.progress = self.progress;
-      scrub.invalidate().restart();
-    },
-  });
-});
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {
+    slideIndex = 1;
+  } else if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndex - 1].style.display = "block";
+}
