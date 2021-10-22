@@ -80,3 +80,13 @@ function showSlides(n) {
   }
   slides[slideIndex - 1].style.display = "block";
 }
+document
+  .querySelectorAll(".projectName")
+  .forEach((project) => project.addEventListener("click", openPopUp));
+function openPopUp(event) {
+  const target = event.currentTarget;
+  const project = target.dataset.project;
+  console.log(project);
+  document.querySelector(`#${project}`).classList.remove("hidden");
+  document;
+}

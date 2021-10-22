@@ -101,6 +101,29 @@ p {
   border: solid blue 1px;
   position: absolute;
 }
+#allProjects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 2rem;
+  padding: 3rem;
+  border: solid red 1px;
+  height: auto;
+}
+.projectName {
+  width: 100%;
+  /* margin: auto; */
+  /* border: solid blue 1px; */
+  font-family: var(--heading-font);
+  text-align: center;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.projectName:hover {
+  text-shadow: 2px 2px 3px grey;
+  transition: all 0.5s;
+}
+
 #pageNav {
   display: flex;
   flex-direction: column;
@@ -254,4 +277,68 @@ h2 {
   100% {
     fill: black;
   }
+}
+.popUp {
+  position: fixed;
+  z-index: 10;
+  width: 95%;
+  height: 95%;
+  left: 2.5%;
+  top: 2.5%;
+  background-color: white;
+  border: solid red 1px;
+}
+.popUp-head {
+  border: solid blue 1px;
+  text-align: center;
+}
+.popUp-head h2,
+.popUpSection h2 {
+  font-size: xx-large;
+  font-family: var(--heading-font);
+}
+.popUpSection p {
+  font-family: var(--text-font);
+  margin: 0;
+  width: auto;
+}
+.popUp-head h3 {
+  font-size: medium;
+  font-family: var(--heading-font);
+}
+.popUp-content {
+  display: flex;
+  justify-content: space-evenly;
+}
+.popUpSection {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+.popUp-images {
+  border: solid blue 1px;
+  position: relative;
+  height: auto;
+  align-items: center;
+}
+.popUpImg {
+  width: auto;
+  height: 30vh;
+}
+.popUpImg1 {
+  margin-left: 20%;
+  border: solid green 1px;
+}
+.popUpImg2 {
+  margin-top: -15%;
+  margin-left: -30%;
+  border: solid pink 1px;
+}
+.popUpImg3 {
+  margin-left: 30%;
+  margin-top: -25%;
+  border: solid yellow 1px;
+}
+.hidden {
+  display: none;
 }

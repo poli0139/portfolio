@@ -56,7 +56,16 @@
           </section>
           <section id="projects" class="panel">
             <h1>My projects</h1>
-            <p></p>
+            <section id="allProjects">
+              <h3 class="projectName" data-project="interestBased">
+                Interest based website
+              </h3>
+              <h3 class="projectName" data-project="game">Game</h3>
+              <h3 class="projectName" data-project="exam">Monsi website</h3>
+              <h3 class="projectName" data-project="configurator">
+                Plant configurator
+              </h3>
+            </section>
           </section>
           <section id="skills" class="panel">
             <h1>My skills</h1>
@@ -121,7 +130,41 @@
         </ul>
       </nav>
     </main>
-
+    <div id="interestBased" class="popUp hidden">
+      <div class="popUp-head">
+        <h2>Project Name</h2>
+        <h3>Theme, individual/group</h3>
+      </div>
+      <section class="popUp-content">
+        <section class="popUp-main popUpSection">
+          <h2>Description</h2>
+          <p class="project-desc">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque
+            repellendus quisquam sint porro omnis, obcaecati, laboriosam
+            voluptatibus aliquam provident aperiam assumenda, rerum enim at
+            sequi id! Eveniet molestiae non vero.
+          </p>
+          <p class="myFocus">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque sunt
+            vitae dolorum magni odio fuga! Repudiandae ex quisquam vel suscipit
+            mollitia quam sunt repellendus, molestiae, debitis, delectus nihil
+            non beatae.
+          </p>
+        </section>
+        <section class="popUp-images popUpSection">
+          <img class="popUpImg1 popUpImg" src="assets/postcard.jpg" alt="" />
+          <img class="popUpImg2 popUpImg" src="assets/postcard.jpg" alt="" />
+          <img class="popUpImg3 popUpImg" src="assets/postcard.jpg" alt="" />
+        </section>
+        <scetion class="popUp-skills popUpSection">
+          <h2>Skills</h2>
+          <p class="skillsHtml">html</p>
+          <p class="skillCss">CSS</p>
+          <p class="skillsJs">JS</p>
+        </scetion>
+      </section>
+      <div id="closeContainer" class="directionRow"></div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
 
