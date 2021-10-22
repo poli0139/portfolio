@@ -54,6 +54,15 @@ body {
 #lines {
   position: fixed;
 }
+#websiteName {
+  position: absolute;
+  top: 0;
+  left: 40%;
+  height: auto;
+  border: solid red 1px;
+  margin: 0;
+  font-family: var(--heading-font);
+}
 
 h1 {
   font-family: var(--heading-font);
@@ -72,17 +81,6 @@ p {
   border: solid black 1px;
 }
 
-#aboutMe {
-  background-color: pink;
-}
-
-#skills {
-  background-color: lightblue;
-}
-
-#projects {
-  background-color: lightyellow;
-}
 #contentSection {
   width: 70vw;
   height: 70vh;
@@ -90,7 +88,6 @@ p {
   top: 12vw;
   left: 0;
   overflow: hidden;
-  border: solid red 1px;
 }
 .panel {
   height: 70vh;
@@ -98,6 +95,7 @@ p {
   /* top: 12vw; */
   position: absolute;
   will-change: transform;
+  background-color: white;
 }
 #scrollSection {
   border: solid blue 1px;
@@ -169,7 +167,7 @@ h2 {
 .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 40%;
   width: auto;
   color: black;
   font-size: 25px;
@@ -207,28 +205,29 @@ h2 {
     opacity: 1;
   }
 }
-/* #scrollDown {
+#scrollDown {
   position: absolute;
   z-index: 7;
   bottom: 0;
   right: 0;
   width: 10%;
   height: auto;
-  border: solid blue 1px;
+  /* border: solid blue 1px; */
 }
 #scrollDown svg {
   position: relative;
 }
+
 #scrollText {
   border: none;
   font-size: 15px;
-  width: 200%;
+  width: 100%;
   position: absolute;
-  top: 45%;
+  top: 40%;
   text-align: center;
-  left: -50%;
+  right: -30%;
   padding: 0;
-  border: solid red 1px;
+  /* border: solid red 1px; */
   margin: 0;
   transform: rotate(270deg);
-} */
+}
