@@ -11,6 +11,7 @@
   </head>
   <body>
     <main>
+      <div id="darkCover" class="hide"></div>
       <section id="boxes_and_lines">
         <div class="zebraBox" id="svgTopLeft" data-place="topLeft"></div>
         <div class="zebraBox" id="svgTopRight" data-place="topRight"></div>
@@ -46,13 +47,20 @@
           </div>
           <section id="aboutMe" class="panel">
             <h1>About me</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
-              autem rem temporibus reprehenderit, quasi recusandae consequatur
-              eos maxime nobis. Repellendus voluptatem atque expedita
-              praesentium eveniet velit dignissimos accusantium dolorum
-              aspernatur!
-            </p>
+            <div class="wrapper">
+              <p>
+                Hi, My name is Polina!<br />
+                I am a Multimedia design student focusing on frontend design and
+                I am very excied to enter the industry. I enjoy creating
+                webpages, face new challanges, learning from others as well as
+                sharing my experience. The Frontend industry truly gives me the
+                feeling, that sharing and collaboration is way more important
+                than competition <br />This webpage shows few of the projects I
+                have done individually or in groups so far.<br />
+                More to be added!
+              </p>
+              <div id="AboutMeImg"></div>
+            </div>
           </section>
           <section id="projects" class="panel">
             <h1>My projects</h1>
@@ -70,11 +78,10 @@
           <section id="skills" class="panel">
             <h1>My skills</h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
-              autem rem temporibus reprehenderit, quasi recusandae consequatur
-              eos maxime nobis. Repellendus voluptatem atque expedita
-              praesentium eveniet velit dignissimos accusantium dolorum
-              aspernatur!
+              I started my education in August 2020 with no experience in
+              Multimedia design. Today I can say that I am feeling confident
+              with HTML, CSS, JavaScript and Adobe CC suit. There is, of course,
+              still a lot to learn and it keeps me excited.
             </p>
           </section>
           <section id="illustrations" class="panel">
@@ -132,6 +139,41 @@
     </main>
     <div id="interestBased" class="popUp hidden">
       <div class="popUp-head">
+        <h2>Interest based website</h2>
+        <h3>Basic web theme, individual project</h3>
+      </div>
+      <section class="popUp-content">
+        <section class="popUp-main popUpSection">
+          <h2>Description</h2>
+          <p class="project-desc">
+            Basic web theme was the first introduction to coding and one of the
+            tasks was to build an interested based website using HTML and CSS
+            also focusing on responsiveness.
+          </p>
+          <h2>My focus</h2>
+          <p class="myFocus">
+            I also spent time making illustrations for the website. So it was
+            the projects where I learned basics of web and design.
+          </p>
+        </section>
+        <section class="popUp-images popUpSection">
+          <img class="popUpImg1 popUpImg" src="assets/postcard.jpg" alt="" />
+          <img class="popUpImg2 popUpImg" src="assets/postcard.jpg" alt="" />
+          <img class="popUpImg3 popUpImg" src="assets/postcard.jpg" alt="" />
+        </section>
+        <scetion class="popUp-skills popUpSection">
+          <h2>Skills</h2>
+          <p class="skillsHtml">html</p>
+          <p class="skillCss">CSS</p>
+          <p class="skillsJs">JS</p>
+          <button class="close">Close</button>
+        </scetion>
+      </section>
+      <div id="closeContainer" class="directionRow"></div>
+    </div>
+
+    <div id="game" class="popUp hidden">
+      <div class="popUp-head">
         <h2>Project Name</h2>
         <h3>Theme, individual/group</h3>
       </div>
@@ -144,6 +186,7 @@
             voluptatibus aliquam provident aperiam assumenda, rerum enim at
             sequi id! Eveniet molestiae non vero.
           </p>
+          <h2>My focus</h2>
           <p class="myFocus">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque sunt
             vitae dolorum magni odio fuga! Repudiandae ex quisquam vel suscipit
@@ -161,6 +204,81 @@
           <p class="skillsHtml">html</p>
           <p class="skillCss">CSS</p>
           <p class="skillsJs">JS</p>
+          <button class="close">Close</button>
+        </scetion>
+      </section>
+      <div id="closeContainer" class="directionRow"></div>
+    </div>
+    <div id="exam" class="popUp hidden">
+      <div class="popUp-head">
+        <h2>Project Name</h2>
+        <h3>Theme, individual/group</h3>
+      </div>
+      <section class="popUp-content">
+        <section class="popUp-main popUpSection">
+          <h2>Description</h2>
+          <p class="project-desc">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque
+            repellendus quisquam sint porro omnis, obcaecati, laboriosam
+            voluptatibus aliquam provident aperiam assumenda, rerum enim at
+            sequi id! Eveniet molestiae non vero.
+          </p>
+          <h2>My focus</h2>
+          <p class="myFocus">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque sunt
+            vitae dolorum magni odio fuga! Repudiandae ex quisquam vel suscipit
+            mollitia quam sunt repellendus, molestiae, debitis, delectus nihil
+            non beatae.
+          </p>
+        </section>
+        <section class="popUp-images popUpSection">
+          <img class="popUpImg1 popUpImg" src="assets/postcard.jpg" alt="" />
+          <img class="popUpImg2 popUpImg" src="assets/postcard.jpg" alt="" />
+          <img class="popUpImg3 popUpImg" src="assets/postcard.jpg" alt="" />
+        </section>
+        <scetion class="popUp-skills popUpSection">
+          <h2>Skills</h2>
+          <p class="skillsHtml">html</p>
+          <p class="skillCss">CSS</p>
+          <p class="skillsJs">JS</p>
+          <button class="close">Close</button>
+        </scetion>
+      </section>
+      <div id="closeContainer" class="directionRow"></div>
+    </div>
+    <div id="configurator" class="popUp hidden">
+      <div class="popUp-head">
+        <h2>Project Name</h2>
+        <h3>Theme, individual/group</h3>
+      </div>
+      <section class="popUp-content">
+        <section class="popUp-main popUpSection">
+          <h2>Description</h2>
+          <p class="project-desc">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque
+            repellendus quisquam sint porro omnis, obcaecati, laboriosam
+            voluptatibus aliquam provident aperiam assumenda, rerum enim at
+            sequi id! Eveniet molestiae non vero.
+          </p>
+          <h2>My focus</h2>
+          <p class="myFocus">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque sunt
+            vitae dolorum magni odio fuga! Repudiandae ex quisquam vel suscipit
+            mollitia quam sunt repellendus, molestiae, debitis, delectus nihil
+            non beatae.
+          </p>
+        </section>
+        <section class="popUp-images popUpSection">
+          <img class="popUpImg1 popUpImg" src="assets/postcard.jpg" alt="" />
+          <img class="popUpImg2 popUpImg" src="assets/postcard.jpg" alt="" />
+          <img class="popUpImg3 popUpImg" src="assets/postcard.jpg" alt="" />
+        </section>
+        <scetion class="popUp-skills popUpSection">
+          <h2>Skills</h2>
+          <p class="skillsHtml">html</p>
+          <p class="skillCss">CSS</p>
+          <p class="skillsJs">JS</p>
+          <button class="close">Close</button>
         </scetion>
       </section>
       <div id="closeContainer" class="directionRow"></div>

@@ -87,6 +87,13 @@ function openPopUp(event) {
   const target = event.currentTarget;
   const project = target.dataset.project;
   console.log(project);
-  document.querySelector(`#${project}`).classList.remove("hidden");
-  document;
+  popUp = document.querySelector(`#${project}`);
+  popUp.classList.remove("hidden");
+  document.querySelector("#darkCover").classList.remove("hide");
+  document.querySelector("#darkCover").classList.add("darker");
+  popUp.querySelector(".close").addEventListener("click", () => {
+    popUp.classList.add("hidden");
+    document.querySelector("#darkCover").classList.remove("darker");
+    document.querySelector("#darkCover").classList.add("hide");
+  });
 }

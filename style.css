@@ -75,12 +75,17 @@ h1 {
 p {
   font-family: var(--text-font);
   margin-left: 3vw;
-  font-size: larger;
-  padding: 2rem;
-  width: 60%;
+  font-size: medium;
+  padding: 1rem;
+  width: 50%;
   border: solid black 1px;
+  line-height: 1.5;
 }
-
+.wrapper {
+  width: 100%;
+  display: flex;
+  column-gap: 10%;
+}
 #contentSection {
   width: 70vw;
   height: 70vh;
@@ -97,8 +102,18 @@ p {
   will-change: transform;
   background-color: white;
 }
+
+#AboutMeImg {
+  background-image: url(assets/aboutMe.jpg);
+  background-position: center;
+  width: 18rem;
+  height: 18rem;
+  background-size: cover;
+  margin: 0;
+  border-radius: 50%;
+}
+
 #scrollSection {
-  border: solid blue 1px;
   position: absolute;
 }
 #allProjects {
@@ -106,7 +121,7 @@ p {
   grid-template-columns: 1fr 1fr;
   row-gap: 2rem;
   padding: 3rem;
-  border: solid red 1px;
+  /* border: solid red 1px; */
   height: auto;
 }
 .projectName {
@@ -119,7 +134,8 @@ p {
   cursor: pointer;
 }
 
-.projectName:hover {
+.projectName:hover,
+.close:hover {
   text-shadow: 2px 2px 3px grey;
   transition: all 0.5s;
 }
@@ -282,14 +298,14 @@ h2 {
   position: fixed;
   z-index: 10;
   width: 95%;
-  height: 95%;
+  height: auto;
+  padding-bottom: 2rem;
+  overflow-y: scroll;
   left: 2.5%;
   top: 2.5%;
   background-color: white;
-  border: solid red 1px;
 }
 .popUp-head {
-  border: solid blue 1px;
   text-align: center;
 }
 .popUp-head h2,
@@ -316,7 +332,6 @@ h2 {
   width: 30%;
 }
 .popUp-images {
-  border: solid blue 1px;
   position: relative;
   height: auto;
   align-items: center;
@@ -340,5 +355,39 @@ h2 {
   border: solid yellow 1px;
 }
 .hidden {
+  display: none;
+}
+.close {
+  border: none;
+  border-bottom: solid black 1px;
+  background: none;
+  margin-bottom: auto;
+  width: 5%;
+  font-family: var(--heading-font);
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+.darker {
+  animation-name: darker;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+@keyframes darker {
+  to {
+    background-color: black;
+    opacity: 0.3;
+  }
+}
+
+#darkCover {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 8;
+}
+.hide {
   display: none;
 }
