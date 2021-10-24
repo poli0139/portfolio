@@ -345,13 +345,13 @@ h2 {
   border: solid green 1px;
 }
 .popUpImg2 {
-  margin-top: -15%;
+  margin-top: -20%;
   margin-left: -30%;
   border: solid pink 1px;
 }
 .popUpImg3 {
   margin-left: 30%;
-  margin-top: -25%;
+  margin-top: -15%;
   border: solid yellow 1px;
 }
 .hidden {
