@@ -340,13 +340,17 @@ h2 {
   width: auto;
   height: 30vh;
 }
+#exam img {
+  height: 25vh;
+  margin-top: 0;
+}
 .popUpImg1 {
   margin-left: 20%;
   border: solid green 1px;
 }
 .popUpImg2 {
-  margin-top: -20%;
-  margin-left: -30%;
+  margin-top: -15%;
+  margin-left: -25%;
   border: solid pink 1px;
 }
 .popUpImg3 {

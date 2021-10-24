@@ -37,13 +37,13 @@ function setBottomRight(shape) {
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.to(".panel:not(:last-child)", {
-  yPercent: -300,
+  yPercent: -100,
   ease: "none",
   stagger: 0.5,
   scrollTrigger: {
-    trigger: "#scrollSection",
-    start: "top top",
-    end: "+=1000%",
+    trigger: "#contentSection",
+    start: "center center",
+    end: "+=800%",
     scrub: true,
     pin: true,
   },
