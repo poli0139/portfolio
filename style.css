@@ -34,11 +34,11 @@ body {
   width: 15%;
   height: 10vw;
 
-  position: fixed;
+  /* position: fixed; */
 }
 
 #svgBottomRight {
-  position: fixed;
+  /* position: fixed; */
   right: 0;
   bottom: 0;
   width: 20%;
