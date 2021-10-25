@@ -46,6 +46,7 @@ gsap.to(".panel:not(:last-child)", {
     end: "+=800%",
     scrub: true,
     pin: true,
+    pinSpacing: false,
   },
 });
 
@@ -67,6 +68,8 @@ function plusSlides(n) {
   showSlides((slideIndex += n));
 }
 
+//SLIDESHOW
+
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
@@ -80,6 +83,8 @@ function showSlides(n) {
   }
   slides[slideIndex - 1].style.display = "block";
 }
+
+//POPUP
 document
   .querySelectorAll(".projectName")
   .forEach((project) => project.addEventListener("click", openPopUp));
