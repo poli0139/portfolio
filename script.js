@@ -34,42 +34,26 @@ function setBottomRight(shape) {
   shape.setAttribute("viewBox", "0 0 1000 400");
   shape.setAttribute("class", "svgToChange");
 }
+
+//SCROLL
+
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.to(".panel:not(:last-child)", {
-  yPercent: -100,
-  ease: "none",
-  stagger: 0.5,
-  scrollTrigger: {
-    trigger: "#contentSection",
-    start: "center center",
-    end: "+=800%",
-    scrub: true,
-    pin: true,
-    pinSpacing: false,
-  },
+ScrollTrigger.create({
+  trigger: "body",
+  start: "top top",
+  end: "bottom bottom",
+  onUpdate: ({ trigger, progress }) =>
+    trigger.style.setProperty("--hue", progress.toFixed(2)),
 });
 
-gsap.set(".panel", { zIndex: (i, target, targets) => targets.length - i });
-
-window.addEventListener("scroll", onScroll);
-
-function onScroll() {
-  console.log("scrolling");
-  // let svgToAnimate = document.querySelectorAll(".zebraBox svg");
-  // svgToAnimate.classList.add("animate");
-  // console.log(svg);
-}
-
+//SLIDESHOW
 let slideIndex = 1;
 showSlides(slideIndex);
 
 function plusSlides(n) {
   showSlides((slideIndex += n));
 }
-
-//SLIDESHOW
-
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");

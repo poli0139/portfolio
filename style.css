@@ -17,12 +17,40 @@
 }
 
 body {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "main aside";
   padding: 0;
   margin: 0;
 }
-
+header {
+  position: sticky;
+  width: 100%;
+  z-index: 11;
+  height: 10vw;
+  top: 0;
+  grid-area: header;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+aside {
+  grid-area: aside;
+  background: #fff;
+  position: sticky;
+  top: 10vw;
+  width: auto;
+  height: 70vh;
+  /* max-block-size: calc(100vh - 10vw); */
+  /* border: solid red 1px; */
+  padding-right: 2rem;
+}
+main {
+  grid-area: main;
+}
 #svgTopLeft {
-  position: fixed;
+  /* position: fixed; */
   width: 30%;
   height: 10vw;
 
@@ -38,13 +66,15 @@ body {
 }
 
 #svgBottomRight {
-  /* position: fixed; */
-  right: 0;
+  position: fixed;
   bottom: 0;
-  width: 20%;
-
   height: 10vw;
 }
+
+.fill {
+  fill: hsl(calc(var(--hue, 0) * 360) 60% 60%);
+}
+
 #boxes_and_lines {
   position: fixed;
   z-index: -1;
@@ -86,14 +116,14 @@ p {
   display: flex;
   column-gap: 10%;
 }
-#contentSection {
+/* #contentSection {
   width: 70vw;
   height: 70vh;
-  /* position: absolute; */
+  position: absolute;
   top: 12vw;
   left: 0;
   overflow: hidden;
-}
+} */
 .panel {
   height: 70vh;
   width: 100%;
@@ -113,9 +143,9 @@ p {
   border-radius: 50%;
 }
 
-#scrollSection {
+/* #scrollSection {
   position: absolute;
-}
+} */
 #allProjects {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -143,9 +173,7 @@ p {
 #pageNav {
   display: flex;
   flex-direction: column;
-  position: fixed;
   text-align: right;
-  right: 2rem;
   top: 30%;
 }
 #pageNav ul {
@@ -153,39 +181,7 @@ p {
   font-family: var(--heading-font);
   font-size: smaller;
 }
-li {
-  position: relative;
-}
-h2:before,
-h2:after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 1px;
-  bottom: 0;
-  background: black;
-}
 
-h2:before {
-  left: 1px;
-}
-h2:after {
-  right: 1px;
-  background: black;
-  transition: all 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
-}
-
-h2:hover:before {
-  background: black;
-  width: 100%;
-  transition: all 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
-}
-
-h2:hover:after {
-  background: transparent;
-  width: 100%;
-  transition: 0s;
-}
 h2 {
   cursor: pointer;
 }
@@ -271,32 +267,9 @@ h2 {
   transform: rotate(270deg);
 }
 
-.animate {
-  animation: svgChangeBG 10s linear infinite alternate;
-}
-@keyframes svgChangeBG {
-  0% {
-    fill: red;
-  }
-  20% {
-    fill: yellow;
-  }
-  40% {
-    fill: lightpink;
-  }
-  60% {
-    fill: lavenderblush;
-  }
-  80% {
-    fill: lemonchiffon;
-  }
-  100% {
-    fill: black;
-  }
-}
 .popUp {
   position: fixed;
-  z-index: 10;
+  z-index: 13;
   width: 95%;
   height: auto;
   padding-bottom: 2rem;
@@ -374,6 +347,7 @@ h2 {
   cursor: pointer;
 }
 .darker {
+  z-index: 12;
   animation-name: darker;
   animation-duration: 1s;
   animation-fill-mode: forwards;
