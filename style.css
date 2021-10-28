@@ -31,7 +31,7 @@ header {
   height: 10vw;
   top: 0;
   grid-area: header;
-  background: #fff;
+  background: white;
   display: flex;
   justify-content: space-between;
 }
@@ -125,7 +125,7 @@ p {
   overflow: hidden;
 } */
 .panel {
-  height: 70vh;
+  height: auto;
   width: 100%;
   /* top: 12vw; */
   /* position: absolute; */
@@ -178,13 +178,22 @@ p {
 }
 #pageNav ul {
   list-style: none;
-  font-family: var(--heading-font);
-  font-size: smaller;
 }
-
-h2 {
+/* NAV LINKS */
+.navlink {
   cursor: pointer;
+  font-family: var(--heading-font);
+  text-decoration-line: none;
+  color: black;
+  font-size: x-large;
 }
+/* .navlink::before {
+  content: "◯";
+  font-size: 12px;
+  vertical-align: middle;
+  margin-right: 5px;
+} */
+
 .slideshow-container {
   position: relative;
   width: 70vw;
@@ -334,18 +343,79 @@ h2 {
 .hidden {
   display: none;
 }
+
+/* CLOSE BUTTON */
+
 .close {
-  border: none;
-  border-bottom: solid black 1px;
-  background: none;
-  margin-bottom: auto;
-  width: 5%;
-  font-family: var(--heading-font);
   position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  cursor: pointer;
+  top: 2rem;
+  right: 3rem;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  background: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration-line: none;
+  color: black;
+  letter-spacing: 4px;
+  font-family: sans-serif;
+  overflow: hidden;
 }
+.close span {
+  display: block;
+  background: black;
+  transition: 0.2s;
+}
+.close span:nth-child(1),
+.close span:nth-child(3) {
+  position: absolute;
+  height: 1px;
+  width: 100%;
+}
+.close span:nth-child(2),
+.close span:nth-child(4) {
+  position: absolute;
+  height: 100%;
+  width: 1px;
+}
+.close span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  transition-delay: 0;
+}
+.close span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  transition-delay: 0.1s;
+}
+.close span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  transition-delay: 0.2s;
+}
+.close span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  transition-delay: 0.3s;
+}
+.close:hover span:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+.close:hover span:nth-child(2) {
+  top: 0;
+  right: 0;
+}
+.close:hover span:nth-child(3) {
+  bottom: 0;
+  right: 0;
+}
+.close:hover span:nth-child(4) {
+  bottom: 0;
+  left: 0;
+}
+
 .darker {
   z-index: 12;
   animation-name: darker;
