@@ -18,7 +18,7 @@ async function start() {
 function SetTopLeft(shape) {
   shape.setAttribute("width", "100%");
   shape.setAttribute("height", "100%");
-  shape.setAttribute("viewBox", "0 0 900 300");
+  shape.setAttribute("viewBox", "0 0 900 500");
   shape.setAttribute("class", "svgToChange");
 }
 function setTopRight(shape) {

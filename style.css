@@ -28,12 +28,28 @@ header {
   position: sticky;
   width: 100%;
   z-index: 11;
-  height: 10vw;
+  height: auto;
   top: 0;
   grid-area: header;
   background: white;
   display: flex;
   justify-content: space-between;
+}
+#website-head {
+  border-bottom: solid black 1px;
+  width: 100%;
+  padding-left: 2rem;
+}
+#website-head h1,
+#website-head h2 {
+  font-family: var(--heading-font);
+  font-weight: 500;
+}
+#website-head h1 {
+  border: none;
+}
+#website-head h2 {
+  font-size: xx-large;
 }
 aside {
   grid-area: aside;
@@ -41,18 +57,20 @@ aside {
   position: sticky;
   top: 10vw;
   width: auto;
-  height: 70vh;
+  height: auto;
   /* max-block-size: calc(100vh - 10vw); */
   /* border: solid red 1px; */
   padding-right: 2rem;
+  border-left: solid black 1px;
 }
+
 main {
   grid-area: main;
 }
 #svgTopLeft {
   /* position: fixed; */
   width: 30%;
-  height: 10vw;
+  height: auto;
 
   top: 0;
 }
@@ -60,7 +78,7 @@ main {
   right: 0;
   top: 0;
   width: 15%;
-  height: 10vw;
+  height: auto;
 
   /* position: fixed; */
 }
@@ -72,7 +90,7 @@ main {
 }
 
 .fill {
-  fill: hsl(calc(var(--hue, 0) * 360) 60% 60%);
+  fill: hsl(calc(var(--hue, 0) * 20) 60% 60%);
 }
 
 #boxes_and_lines {
