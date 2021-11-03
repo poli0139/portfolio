@@ -1,0 +1,48 @@
+@media (max-width: 915px) {
+  p {
+    width: auto;
+    margin: 0 1rem;
+  }
+  .mySlides img {
+    height: 60vh;
+  }
+  .prev {
+    left: 10%;
+  }
+  .next {
+    right: 10%;
+  }
+}
+
+@media (max-width: 720px) {
+  /* #svgTopRight {
+    display: none;
+  }
+  header {
+    flex-direction: column;
+  }
+  #svgTopLeft {
+    width: 100%;
+    height: 3rem;
+  } */
+  .zebraBox {
+    display: none;
+  }
+  body {
+    grid-template-areas:
+      "header"
+      "aside"
+      "main";
+  }
+
+  #pageNav ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navlink {
+    font-size: larger;
+  }
+}

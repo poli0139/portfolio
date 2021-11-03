@@ -30,7 +30,7 @@ body {
 }
 header {
   position: sticky;
-  width: 100%;
+  width: auto;
   z-index: 11;
   height: auto;
   top: 0;
@@ -52,9 +52,7 @@ header {
 #website-head h1 {
   border: none;
 }
-#website-head h2 {
-  font-size: xx-large;
-}
+
 aside {
   grid-area: aside;
   background: #fff;
@@ -132,21 +130,15 @@ p {
 .wrapper {
   width: 100%;
   display: flex;
-  column-gap: 10%;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  /* column-gap: 10%; */
+  justify-content: space-between;
 }
-/* #contentSection {
-  width: 70vw;
-  height: 70vh;
-  position: absolute;
-  top: 12vw;
-  left: 0;
-  overflow: hidden;
-} */
+
 .panel {
   height: auto;
   width: 100%;
-  /* top: 12vw; */
-  /* position: absolute; */
   will-change: transform;
   background-color: white;
 }
@@ -157,7 +149,7 @@ p {
   width: 18rem;
   height: 18rem;
   background-size: cover;
-  margin: 0;
+  margin: auto;
   border-radius: 50%;
 }
 
@@ -167,17 +159,15 @@ p {
 #allProjects {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin: 3rem;
   row-gap: 2rem;
-  padding: 3rem;
-  /* border: solid red 1px; */
   height: auto;
 }
 .projectName {
-  width: 50%;
+  width: auto;
   margin: auto;
-  /* border: solid blue 1px; */
   font-family: var(--heading-font);
-  text-align: -webkit-center;
+  text-align: center;
   transition: all 0.5s;
   cursor: pointer;
 }
@@ -215,8 +205,8 @@ p {
 
 .slideshow-container {
   position: relative;
-  width: 70vw;
-  height: 70vh;
+  width: 100%;
+  height: auto;
   text-align: center;
 }
 .mySlides {
@@ -305,6 +295,7 @@ p {
   left: 2.5%;
   top: 2.5%;
   background-color: white;
+  transition: all 1s;
 }
 .popUp-head {
   text-align: center;
@@ -333,20 +324,23 @@ p {
   flex-direction: column;
   width: 30%;
 }
+.skill-list {
+  column-count: 2;
+}
 .popUp-skills p {
   border: none;
+  text-transform: uppercase;
+  font-size: large;
 }
-.popUp-skills div {
-  display: flex;
-  flex-direction: row;
-}
-.popUp-skills span {
-  width: 1rem;
-  height: 1rem;
-  margin: 0 0.5rem;
-  border-radius: 50%;
-  background-color: black;
-  align-self: center;
+.popUp-skills p::before {
+  content: "";
+  width: 10%;
+  height: 5px;
+  margin-right: 0.5rem;
+  border-radius: 5px;
+  border: 2px solid dimgray;
+  display: inline-flex;
+  vertical-align: middle;
 }
 
 .popUp-images {
