@@ -11,6 +11,10 @@
   font-style: normal;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --heading-font: "Intro Cond Light Free", sans-serif;
   --text-font: "Montserrat", sans-serif;
@@ -55,12 +59,11 @@ aside {
   grid-area: aside;
   background: #fff;
   position: sticky;
+  right: 0;
   top: 10vw;
   width: auto;
   height: auto;
-  /* max-block-size: calc(100vh - 10vw); */
-  /* border: solid red 1px; */
-  padding-right: 2rem;
+  padding-right: 1rem;
   border-left: solid black 1px;
 }
 
@@ -68,7 +71,6 @@ main {
   grid-area: main;
 }
 #svgTopLeft {
-  /* position: fixed; */
   width: 30%;
   height: auto;
 
@@ -79,8 +81,6 @@ main {
   top: 0;
   width: 15%;
   height: auto;
-
-  /* position: fixed; */
 }
 
 #svgBottomRight {
@@ -173,11 +173,11 @@ p {
   height: auto;
 }
 .projectName {
-  width: 100%;
-  /* margin: auto; */
+  width: 50%;
+  margin: auto;
   /* border: solid blue 1px; */
   font-family: var(--heading-font);
-  text-align: center;
+  text-align: -webkit-center;
   transition: all 0.5s;
   cursor: pointer;
 }
@@ -192,6 +192,7 @@ p {
   display: flex;
   flex-direction: column;
   text-align: right;
+  position: sticky;
   top: 30%;
 }
 #pageNav ul {
@@ -332,6 +333,22 @@ p {
   flex-direction: column;
   width: 30%;
 }
+.popUp-skills p {
+  border: none;
+}
+.popUp-skills div {
+  display: flex;
+  flex-direction: row;
+}
+.popUp-skills span {
+  width: 1rem;
+  height: 1rem;
+  margin: 0 0.5rem;
+  border-radius: 50%;
+  background-color: black;
+  align-self: center;
+}
+
 .popUp-images {
   position: relative;
   height: auto;
@@ -426,19 +443,23 @@ p {
   display: block;
   background: black;
   transition: 0.2s;
+  margin: 0;
 }
+
 .close span:nth-child(1),
 .close span:nth-child(3) {
   position: absolute;
   height: 1px;
   width: 100%;
 }
+
 .close span:nth-child(2),
 .close span:nth-child(4) {
   position: absolute;
   height: 100%;
   width: 1px;
 }
+
 .close span:nth-child(1) {
   top: 0;
   left: -100%;
