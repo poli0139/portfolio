@@ -19,42 +19,12 @@
       </div>
       <div class="zebraBox fill" id="svgTopRight" data-place="topRight"></div>
     </header>
-    <aside>
-      <nav id="pageNav">
-        <ul>
-          <li>
-            <a class="navlink" href="#aboutMe">About me
-            </a>
-          </li>
-          <li>
-            <a class="navlink" href="#projects">Projects
-            </a>
-          </li>
-          <li>
-            <a class="navlink" href="#skills">Skills
-            </a>
-          </li>
-          <li>
-            <a class="navlink" href="#illustrations">Illustrations
-            </a>
-          </li>
-          <li>
-            <a class="navlink" href="#">Contact me
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <div
-        class="zebraBox fill"
-        id="svgBottomRight"
-        data-place="bottomRight"
-      ></div>
-    </aside>
+    
     <main>
-      <div id="darkCover" class="hide"></div>
-      <section id="scrollSection">
+    
+      <div id="darkCover" class="hidden"></div>
         <section id="contentSection">
-          <section id="aboutMe" class="panel">
+          <section id="about" class="panel">
             <h1>About me</h1>
             <div class="wrapper">
               <p>
@@ -71,7 +41,7 @@
               <div id="AboutMeImg"></div>
             </div>
           </section>
-          <section id="projects" class="panel">
+          <section id="projects" class="panel hidden">
             <h1>My projects</h1>
             <section id="allProjects">
               <h3 class="projectName" data-project="interestBased">
@@ -84,7 +54,7 @@
               </h3>
             </section>
           </section>
-          <section id="skills" class="panel">
+          <section id="skills" class="panel hidden">
             <h1>My skills</h1>
             <p>
               I started my education in August 2020 with no experience in
@@ -93,7 +63,7 @@
               still a lot to learn and it keeps me excited.
             </p>
           </section>
-          <section id="illustrations" class="panel">
+          <section id="illustrations" class="panel hidden">
             <h1>Illustrations</h1>
             <div class="slideshow-container">
               <div class="mySlides fade">
@@ -125,8 +95,39 @@
             </div>
           </section>
         </section>
-      </section>
+        
     </main>
+    <aside>
+      <nav id="pageNav">
+        <ul>
+          <li>
+            <a class="navlink" data-page="about">About me
+            </a>
+          </li>
+          <li>
+            <a class="navlink" data-page="projects">Projects
+            </a>
+          </li>
+          <li>
+            <a class="navlink" data-page="skills">Skills
+            </a>
+          </li>
+          <li>
+            <a class="navlink" data-page="illustrations">Illustrations
+            </a>
+          </li>
+          <li>
+            <a class="navlink" href="#">Contact me
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div
+        class="zebraBox fill"
+        id="svgBottomRight"
+        data-place="bottomRight"
+      ></div>
+    </aside>
     <div id="interestBased" class="popUp hidden ">
       <div class="popUp-head">
         <h2>Interest based website</h2>

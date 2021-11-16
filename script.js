@@ -37,15 +37,15 @@ function setBottomRight(shape) {
 
 //SCROLL
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
-ScrollTrigger.create({
-  trigger: "body",
-  start: "top top",
-  end: "bottom bottom",
-  onUpdate: ({ trigger, progress }) =>
-    trigger.style.setProperty("--hue", progress.toFixed(2)),
-});
+// ScrollTrigger.create({
+//   trigger: "body",
+//   start: "top top",
+//   end: "bottom bottom",
+//   onUpdate: ({ trigger, progress }) =>
+//     trigger.style.setProperty("--hue", progress.toFixed(2)),
+// });
 
 //SLIDESHOW
 let slideIndex = 1;
@@ -78,11 +78,27 @@ function openPopUp(event) {
   console.log(project);
   popUp = document.querySelector(`#${project}`);
   popUp.classList.remove("hidden");
-  document.querySelector("#darkCover").classList.remove("hide");
+  document.querySelector("#darkCover").classList.remove("hidden");
   document.querySelector("#darkCover").classList.add("darker");
   popUp.querySelector(".close").addEventListener("click", () => {
     popUp.classList.add("hidden");
     document.querySelector("#darkCover").classList.remove("darker");
-    document.querySelector("#darkCover").classList.add("hide");
+    document.querySelector("#darkCover").classList.add("hidden");
   });
+}
+
+//NAVIGATION
+document
+  .querySelectorAll(".navlink")
+  .forEach((navLink) => navLink.addEventListener("click", showPanel));
+function showPanel(event) {
+  const target = event.currentTarget;
+  const panelName = target.dataset.page;
+  console.log(panelName);
+  panel = document.querySelector(`#${panelName}`);
+  console.log(panel);
+  shown = document.querySelector(".panel:not(.hidden)");
+  console.log(shown);
+  shown.classList.add("hidden");
+  panel.classList.remove("hidden");
 }
