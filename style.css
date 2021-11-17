@@ -88,9 +88,9 @@ main {
   height: 10vw;
 }
 
-.fill {
+/* .fill {
   fill: hsl(calc(var(--hue, 0) * 20) 60% 60%);
-}
+} */
 
 #boxes_and_lines {
   position: fixed;
